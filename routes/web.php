@@ -18,11 +18,16 @@ Route::get('/', function () {
     return view('admin');
 });
 
+Route::get('/masuk', function () {
+    return view('presensi.masuk');
+});
+
+Route::get('/keluar', function () {
+    return view('presensi.keluar');
+});
+
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'home'])->name('home');
 
 
 Auth::routes();
 
-Route::group(['middleware' => ['auth']],function () {
-    
-});

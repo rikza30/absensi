@@ -1,4 +1,20 @@
-<!-- Main Sidebar Container -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Dashboard</title>
+  @include('template.head')
+</head>
+<body class="hold-transition dark-mode sidebar-mini layout-fixed layout-navbar-fixed layout-footer-fixed">
+<div class="wrapper">
+
+  <!-- Preloader -->
+  <div class="preloader flex-column justify-content-center align-items-center">
+    <img class="animation__wobble" src="{{asset('asset/dist/img/AdminLTELogo.png')}}" alt="AdminLTELogo" height="60" width="60">
+  </div>
+
+  @include('template.navbar')
+
+  <!-- Main Sidebar Container -->
   <aside class="main-sidebar sidebar-dark-primary elevation-4">
     <!-- Brand Logo -->
     <a href="index3.html" class="brand-link">
@@ -42,13 +58,13 @@
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="./index.html" class="nav-link">
+                <a href="/masuk" class="nav-link active">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Presensi Masuk</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="./index2.html" class="nav-link">
+                <a href="/keluar" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Presensi Keluar</p>
                 </a>
@@ -75,3 +91,33 @@
       </nav>    
     </div>
   </aside>
+
+  <!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <div class="content-header">
+      <div class="container-fluid">
+        <div class="row mb-2">
+          <div class="col-sm-6">
+            <h1 class="m-0">Presensi Masuk</h1>
+          </div>
+          <div class="col-sm-6">
+            <ol class="breadcrumb float-sm-right">
+              <li class="breadcrumb-item"><a href="#">Home</a></li>
+              <li class="breadcrumb-item active">Presensi Masuk</li>
+            </ol>
+          </div>
+        </div>
+      </div>
+    </div>
+  <aside class="control-sidebar control-sidebar-dark">
+  </aside>
+
+  @include('template.footer')
+</div>
+
+
+  @include('template.script')
+
+</body>
+</html>
