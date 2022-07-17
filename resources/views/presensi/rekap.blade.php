@@ -86,7 +86,7 @@
                 </a>
               </li>
               <li class="nav-item">
-                <a href="/keluar" class="nav-link active">
+                <a href="/keluar" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Presensi Keluar</p>
                 </a>
@@ -102,7 +102,7 @@
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="/lihat-data" class="nav-link">
+                <a href="./index.html" class="nav-link active">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Lihat Data </p>
                 </a>
@@ -121,12 +121,12 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1 class="m-0">Presensi Keluar</h1>
+            <h1 class="m-0">Laporan Presensi</h1>
           </div>
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
               <li class="breadcrumb-item"><a href="#">Home</a></li>
-              <li class="breadcrumb-item active">Presensi Keluar</li>
+              <li class="breadcrumb-item active">Laporan Presensi</li>
             </ol>
           </div>
         </div>
@@ -134,24 +134,46 @@
     </div>
     <div class="content">
         <div class="row justify-content-center">
-            <div class="card card-info card-outline">
-                <div class="card-header">Presensi Keluar</div>
-                <div class="card-body">
-                    <form action="#" method="post">
-                        {{ csrf_field() }}
-                        <div class="form-group">
-                            <center>
-                                <label id="clock" style="font-size: 100px; color: #ffffff; ">
-                                </label>
-                            </center>
-                        </div>
-                        <center>
+            <div class="content">
+                <div class="row justify-content-center">
+                    <div class="card card-info card-outline">
+                        <div class="card-header">Lihat Data</div>
+                        <div class="card-body">
                             <div class="form-group">
-                                <button type="submit" class="btn btn-primary">Klik Untuk Presensi Keluar</button>
+                                <label for="label">Tanggal Awal</label>
+                                <input type="date" name="tglawal" id="tglawal" class="form-control" />
                             </div>
-                        </center>
-                    </form>
-
+                            <div class="form-group">
+                                <label for="label">Tanggal Akhir</label>
+                                <input type="date" name="tglakhir" id="tglakhir" class="form-control" />
+                            </div>
+                            <div class="form-group">
+                                <a href="" onclick="this.href='/filter-data/'+ document.getElementById('tglawal').value +
+                            '/' + document.getElementById('tglakhir').value " class="btn btn-primary col-md-12">
+                                    Lihat <i class="fas fa-print"></i>
+                                </a>
+                            </div>
+                            <div class="form-group">
+                                <table border="1">
+                                    <tr>
+                                        <th><center>Pegawai</center></th>
+                                        <th><center>Tanggal</center></th>
+                                        <th><center>Masuk</center></th>
+                                        <th><center>Keluar</center></th>
+                                        <th><center>Jumlah Jam Kerja</center></th>
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td><center>Rikza</center></td>
+                                        <td><center>20/07/2022</center></td>
+                                        <td><center>09:42:50</center></td>
+                                        <td><center>14:20:50</center></td>
+                                        <td><center>5</center></td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div><!-- /.container-fluid -->
+                    </div>
                 </div>
             </div>
         </div>

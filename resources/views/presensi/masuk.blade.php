@@ -3,8 +3,30 @@
 <head>
   <title>Dashboard</title>
   @include('template.head')
+  <script src="{{asset('Js/jam.js')}}"></script>
+  <style>
+    #watch {
+        color: rgb(red, green, blue);
+        position: absolute;
+        z-index: 1;
+        height: 40px;
+        width: 700px;
+        overflow: show;
+        margin: auto;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        font-size: 10vw
+        -webkit-text-stroke: 3px rgb(210, 65, 36);
+        text-shadow: 4px 4px 10px rgba(210, 65, 36, 0.4),
+            4px 4px 20px rgba(210, 45, 26, 0.4),
+            4px 4px 30px rgba(210, 25, 16, 0.4),
+            4px 4px 40px rgba(210, 15, 06, 0.4);  
+    }
+  </style>
 </head>
-<body class="hold-transition dark-mode sidebar-mini layout-fixed layout-navbar-fixed layout-footer-fixed">
+<body class="hold-transition dark-mode sidebar-mini layout-fixed layout-navbar-fixed layout-footer-fixed" onload="realtimeClock()">
 <div class="wrapper">
 
   <!-- Preloader -->
@@ -80,9 +102,9 @@
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="./index.html" class="nav-link">
+                <a href="/lihat-data" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
-                  <p>Cetak Data </p>
+                  <p>Lihat Data </p>
                 </a>
               </li>
             </ul>
@@ -98,8 +120,8 @@
     <div class="content-header">
       <div class="container-fluid">
         <div class="row mb-2">
-          <div class="col-sm-6">
-            <h1 class="m-0">Presensi Masuk</h1>
+           <div class="col-sm-6">
+               <h1 class="m-0">Presensi Masuk</h1>
           </div>
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
@@ -109,6 +131,31 @@
           </div>
         </div>
       </div>
+    </div>
+
+    <div class="content">
+        <div class="row justify-content-center">
+            <div class="card card-info card-outline">
+                <div class="card-header">Presensi Masuk</div>
+                <div class="card-body">
+                    <form action="#" method="post">
+                        {{ csrf_field() }}
+                        <div class="form-group">
+                            <center>
+                                <label id="clock" style="font-size: 100px; color: #ffffff; ">
+                                </label>
+                            </center>
+                        </div>
+                        <center>
+                            <div class="form-group">
+                                <button type="submit" class="btn btn-primary">Klik Untuk Presensi Masuk</button>
+                            </div>
+                        </center>
+                    </form>
+
+                </div>
+            </div>
+        </div>
     </div>
   <aside class="control-sidebar control-sidebar-dark">
   </aside>

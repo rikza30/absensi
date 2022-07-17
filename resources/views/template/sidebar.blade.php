@@ -42,13 +42,13 @@
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="./index.html" class="nav-link">
+                <a href="/masuk" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Presensi Masuk</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="./index2.html" class="nav-link">
+                <a href="/keluar" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Presensi Keluar</p>
                 </a>
@@ -64,7 +64,7 @@
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="./index.html" class="nav-link">
+                <a href="/lihat-data" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Cetak Data </p>
                 </a>

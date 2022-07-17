@@ -1,6 +1,8 @@
 <?php
 
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\HomeController;
 
 /*
 |--------------------------------------------------------------------------
@@ -24,6 +26,10 @@ Route::get('/masuk', function () {
 
 Route::get('/keluar', function () {
     return view('presensi.keluar');
+});
+
+Route::get('/lihat-data', function () {
+    return view('presensi.rekap');
 });
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'home'])->name('home');
