@@ -138,7 +138,7 @@
             <div class="card card-info card-outline">
                 <div class="card-header">Presensi Masuk</div>
                 <div class="card-body">
-                    <form action="#" method="post">
+                    <form action="{{route('simpanmasuk')}}" method="post">
                         {{ csrf_field() }}
                         <div class="form-group">
                             <center>

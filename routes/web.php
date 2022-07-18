@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\PresensiController;
 
 /*
 |--------------------------------------------------------------------------
@@ -32,8 +33,16 @@ Route::get('/lihat-data', function () {
     return view('presensi.rekap');
 });
 
+Route::post('/simpanmasuk', [PresensiController::class, 'store'])->name('simpanmasuk');
+Route::post('ubahpresensi',[PresensiController::class,'presensipulang'])->name('ubahpresensi');
+
+
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'home'])->name('home');
 
 
 Auth::routes();
 
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
