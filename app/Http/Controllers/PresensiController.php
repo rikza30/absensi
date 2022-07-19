@@ -56,7 +56,7 @@ class PresensiController extends Controller
             ]);
         }
 
-        return redirect('presensi.masuk');
+        return redirect('home');
     } 
 
     public function presensipulang(){
@@ -77,7 +77,7 @@ class PresensiController extends Controller
 
         if ($presensi->jamkeluar == ""){
             $presensi->update($dt);
-            return redirect('presensi.keluar');
+            return redirect('home');
         }else{
             dd("sudah ada");
         }
