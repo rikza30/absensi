@@ -16,9 +16,8 @@ use App\Http\Controllers\PresensiController;
 |
 */
 
-
-Route::get('/', function () {
-    return view('admin');
+Route::get('/', function(){
+    return view('auth.login');
 });
 
 Route::get('/masuk', function () {
