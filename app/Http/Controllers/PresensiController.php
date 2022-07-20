@@ -43,14 +43,14 @@ class PresensiController extends Controller
         $localtime = $date->format('H:i:s');
 
         $presensi = Presensi::where([
-            ['user_id','=',auth()->user()->id],
+            ['name','=',auth()->user()->name],
             ['tgl','=',$tanggal],
         ])->first();
         if ($presensi){
-            dd("sudah ada");
+            return redirect('home');
         }else{
             Presensi::create([
-                'user_id' => auth()->user()->id,
+                'name' => auth()->user()->name,
                 'tgl' => $tanggal,
                 'jammasuk' => $localtime,
             ]);
@@ -66,7 +66,7 @@ class PresensiController extends Controller
         $localtime = $date->format('H:i:s');
 
         $presensi = Presensi::where([
-            ['user_id','=',auth()->user()->id],
+            ['name','=',auth()->user()->$name],
             ['tgl','=',$tanggal],
         ])->first();
         
@@ -79,7 +79,7 @@ class PresensiController extends Controller
             $presensi->update($dt);
             return redirect('home');
         }else{
-            dd("sudah ada");
+            return redirect('home');
         }
     }
     /**
