@@ -42,3 +42,13 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'home'])->name(
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+
+Route::group(['middleware' => ['auth', 'ceklevel:admin']], function (){
+    Route::get('/presensi.rekap', [PresensiController::class, 'lihat-data'])->name('rekap');
+});
+
+Route::group(['middleware' => ['auth', 'ceklevel:user']], function (){
+    Route::get('/presensi.masuk', [PresensiController::class, 'masuk'])->name('masuk');
+    Route::get('/presensi.keluar', [PresensiController::class, 'keluar'])->name('keluar');
+});
