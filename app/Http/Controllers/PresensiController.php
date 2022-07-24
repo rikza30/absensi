@@ -66,7 +66,7 @@ class PresensiController extends Controller
         $localtime = $date->format('H:i:s');
 
         $presensi = Presensi::where([
-            ['name','=',auth()->user()->$name],
+            ['name','=',auth()->user()->name],
             ['tgl','=',$tanggal],
         ])->first();
         
