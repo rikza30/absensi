@@ -133,13 +133,13 @@
       </div>
     </div>
     <div class="content">
-        <div class="row justify-content-center">
+        <div class="row justify-content-center " >
             <div class="content">
                 <div class="row justify-content-center">
                     <div class="card card-info card-outline">
                         <div class="card-header">Lihat Data</div>
-                        <div class="card-body">
-                            <div class="form-group">
+                        <div class="card-body" style="width: 430px">
+                            <div class="form-group ">
                                 <label for="label">Tanggal Awal</label>
                                 <input type="date" name="tglawal" id="tglawal" class="form-control" />
                             </div>
@@ -153,25 +153,7 @@
                                     Lihat <i class="fas fa-print"></i>
                                 </a>
                             </div>
-                            <div class="form-group">
-                                <table border="1">
-                                    <tr>
-                                        <th><center>Pegawai</center></th>
-                                        <th><center>Tanggal</center></th>
-                                        <th><center>Masuk</center></th>
-                                        <th><center>Keluar</center></th>
-                                        <th><center>Jumlah Jam Kerja</center></th>
-                                    </tr>
-                                    
-                                    <tr>
-                                        <td><center>Rikza</center></td>
-                                        <td><center>20/07/2022</center></td>
-                                        <td><center>09:42:50</center></td>
-                                        <td><center>14:20:50</center></td>
-                                        <td><center>5</center></td>
-                                    </tr>
-                                </table>
-                            </div>
+                            
                         </div><!-- /.container-fluid -->
                     </div>
                 </div>
