@@ -16,7 +16,7 @@ class PresensiController extends Controller
      */
     public function index()
     {
-        //
+        return view ('rekap');
     }
 
     /**
@@ -47,16 +47,16 @@ class PresensiController extends Controller
             ['tgl','=',$tanggal],
         ])->first();
         if ($presensi){
-            return redirect('home');
+            return redirect('home')->with('succes','Data Berhasil di Input');
         }else{
             Presensi::create([
                 'name' => auth()->user()->name,
                 'tgl' => $tanggal,
                 'jammasuk' => $localtime,
-            ]);
+            ])->with('succes','Data Berhasil di Input');
         }
 
-        return redirect('home');
+        return redirect('home')->with('succes','Data Berhasil di Input');
     } 
 
     public function presensipulang(){
@@ -77,20 +77,28 @@ class PresensiController extends Controller
 
         if ($presensi->jamkeluar == ""){
             $presensi->update($dt);
-            return redirect('home');
+            return redirect('home')->with('succes','Data Berhasil di Input');
         }else{
-            return redirect('home');
+            return redirect('home')->with('succes','Data Berhasil di Input');
         }
     }
+
     /**
      * Display the specified resource.
      *
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+
+    public function halamanrekap()
     {
-        //
+        return view('Presensi.halaman-rekap');
+    }
+
+    public function show ($tglawal, $tglakhir)
+    {
+        $presensi = Presensi::with('user')->whereBetween('tgl', [$tglawal, $tglakhir])->orderBy('tgl','asc')->get();
+        return view('presensi.rekap', compact('presensi'));
     }
 
     /**
