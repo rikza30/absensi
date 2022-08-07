@@ -30,9 +30,10 @@
         </div>
       </div>
 
-      <!-- Sidebar Menu -->
+      <!-- Sidebar Menu -->     
       <nav class="mt-2">
         <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+        @if (auth()->user()->level == "user")
           <li class="nav-item ">
             <a href="#" class="nav-link">
               <p>
@@ -55,6 +56,9 @@
               </li>
             </ul>
           </li>
+          @endif
+
+          @if (auth()->user()->level == "admin")
           <li class="nav-item ">
             <a href="#" class="nav-link">
               <p>
@@ -64,13 +68,14 @@
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="/lihat-data" class="nav-link">
+                <a href="/presensi/rekap" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Cetak Data </p>
                 </a>
               </li>
             </ul>
           </li>
+          @endif
         </ul>
       </nav>    
     </div>

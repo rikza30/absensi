@@ -102,7 +102,7 @@
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="./index.html" class="nav-link active">
+                <a href="/rekap" class="nav-link active">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Lihat Data </p>
                 </a>
@@ -133,13 +133,13 @@
       </div>
     </div>
     <div class="content">
-        <div class="row justify-content-center " >
+        <div class="row justify-content-center">
             <div class="content">
                 <div class="row justify-content-center">
                     <div class="card card-info card-outline">
                         <div class="card-header">Lihat Data</div>
-                        <div class="card-body" style="width: 430px">
-                            <div class="form-group ">
+                        <div class="card-body">
+                            <div class="form-group">
                                 <label for="label">Tanggal Awal</label>
                                 <input type="date" name="tglawal" id="tglawal" class="form-control" />
                             </div>
@@ -153,7 +153,26 @@
                                     Lihat <i class="fas fa-print"></i>
                                 </a>
                             </div>
-                            
+                            <div class="form-group">
+                                <table border="1">
+                                    <tr>
+                                        <th><center>Karyawan</center></th>
+                                        <th><center>Tanggal</center></th>
+                                        <th><center>Masuk</center></th>
+                                        <th><center>Keluar</center></th>
+                                        <th><center>Jumlah Jam Kerja</center></th>
+                                    </tr>
+                                    @foreach ($presensi as $pres)
+                                    <tr>
+                                        <td><center>{{ $pres->name }}</center></td>
+                                        <td><center>{{ $pres->tgl }}</center></td>
+                                        <td><center>{{ $pres->jammasuk }}</center></td>
+                                        <td><center>{{ $pres->jamkeluar }}</center></td>
+                                        <td><center>{{ $pres->jamkerja }}</center></td>
+                                    </tr>
+                                    @endforeach
+                                </table>
+                            </div>
                         </div><!-- /.container-fluid -->
                     </div>
                 </div>

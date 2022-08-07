@@ -28,24 +28,27 @@ Route::get('/keluar', function () {
     return view('presensi.keluar');
 });
 
-Route::get('/lihat-data', function () {
+Route::get('/rekap', function () {
     return view('presensi.rekap');
 });
 
-Route::post('/simpanmasuk', [PresensiController::class, 'store'])->name('simpanmasuk');
-Route::post('ubahpresensi',[PresensiController::class,'presensipulang'])->name('ubahpresensi');
 
+Route::post('/simpanmasuk', [PresensiController::class, 'store'])->name('simpanmasuk');
+Route::post('/ubahpresensi',[PresensiController::class,'presensipulang'])->name('ubahpresensi');
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'home'])->name('home');
 
+Route::resource('presensi', PresensiController::class);
 
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 
+
 Route::group(['middleware' => ['auth', 'ceklevel:admin']], function (){
-    Route::get('/presensi.rekap', [PresensiController::class, 'lihat-data'])->name('rekap');
+    Route::get('lihat-data',[PresensiController::class,'halamanrekap'])->name('lihat-data'); 
+    Route::get('lihat-data/{tglawal}/{tglakhir}', [PresensiController::class,'show'])->name('lihat-data-keseluruhan');
 });
 
 Route::group(['middleware' => ['auth', 'ceklevel:user']], function (){
