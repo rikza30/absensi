@@ -150,10 +150,8 @@
                             <div class="form-group">
                                 <button type="submit" class="btn btn-primary">Klik Untuk Presensi Masuk</button>
                             </div>
-                            
                         </center>
                     </form>
-                    
                 </div>
             </div>
         </div>
