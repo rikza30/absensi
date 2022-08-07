@@ -48,7 +48,7 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 
 Route::group(['middleware' => ['auth', 'ceklevel:admin']], function (){
     Route::get('lihat-data',[PresensiController::class,'halamanrekap'])->name('lihat-data'); 
-    Route::get('lihat-data/{tglawal}/{tglakhir}', [PresensiController::class,'show'])->name('lihat-data-keseluruhan');
+    Route::get('lihat-data/{tglawal}', [PresensiController::class,'show'])->name('show');
 });
 
 Route::group(['middleware' => ['auth', 'ceklevel:user']], function (){

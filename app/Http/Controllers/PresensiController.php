@@ -95,9 +95,9 @@ class PresensiController extends Controller
         return view('Presensi.halaman-rekap');
     }
 
-    public function show ($tglawal, $tglakhir)
+    public function show ($tglawal)
     {
-        $presensi = Presensi::with('user')->whereBetween('tgl', [$tglawal, $tglakhir])->orderBy('tgl','asc')->get();
+        $presensi = Presensi::with('user')->where('tgl', [$tglawal])->orderBy('tgl','asc')->get();
         return view('presensi.rekap', compact('presensi'));
     }
 

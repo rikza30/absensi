@@ -48,16 +48,11 @@ scratch. This page gets rid of all links and provides the needed markup only.
                         <div class="card-header">Lihat Data</div>
                         <div class="card-body">
                             <div class="form-group">
-                                <label for="label">Tanggal Awal</label>
+                                <label for="label">Tanggal</label>
                                 <input type="date" name="tglawal" id="tglawal" class="form-control" />
                             </div>
                             <div class="form-group">
-                                <label for="label">Tanggal Akhir</label>
-                                <input type="date" name="tglakhir" id="tglakhir" class="form-control" />
-                            </div>
-                            <div class="form-group">
-                                <a href="" onclick="this.href='/filter-data/'+ document.getElementById('tglawal').value +
-                            '/' + document.getElementById('tglakhir').value " class="btn btn-primary col-md-12">
+                                <a href="" onclick="this.href='/lihat-data/'+ document.getElementById('tglawal').value" class="btn btn-primary col-md-12">
                                     Lihat <i class="fas fa-print"></i>
                                 </a>
                             </div>
