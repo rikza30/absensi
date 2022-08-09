@@ -47,7 +47,7 @@ class PresensiController extends Controller
             ['tgl','=',$tanggal],
         ])->first();
         if ($presensi){
-            return redirect('home')->with('succes','Data Berhasil di Input');
+            return redirect('/smasuk')->with('succes','Data Berhasil di Input');
         }else{
             Presensi::create([
                 'name' => auth()->user()->name,
@@ -56,7 +56,7 @@ class PresensiController extends Controller
             ])->with('succes','Data Berhasil di Input');
         }
 
-        return redirect('home')->with('succes','Data Berhasil di Input');
+        return redirect('/smasuk');
     } 
 
     public function presensipulang(){
@@ -75,12 +75,7 @@ class PresensiController extends Controller
             'jamkerja' => date('H:i:s', strtotime($localtime) - strtotime($presensi->jammasuk))
         ];
 
-        if ($presensi->jamkeluar == ""){
-            $presensi->update($dt);
-            return redirect('home')->with('succes','Data Berhasil di Input');
-        }else{
-            return redirect('home')->with('succes','Data Berhasil di Input');
-        }
+        return redirect('/skeluar');
     }
 
     /**

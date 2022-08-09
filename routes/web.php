@@ -32,6 +32,13 @@ Route::get('/rekap', function () {
     return view('presensi.rekap');
 });
 
+Route::get('/skeluar', function () {
+    return view('salam.skeluar');
+});
+
+Route::get('/smasuk', function () {
+    return view('salam.smasuk');
+});
 
 Route::post('/simpanmasuk', [PresensiController::class, 'store'])->name('simpanmasuk');
 Route::post('/ubahpresensi',[PresensiController::class,'presensipulang'])->name('ubahpresensi');

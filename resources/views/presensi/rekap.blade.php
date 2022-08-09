@@ -127,7 +127,7 @@
                                 </a>
                             </div>
                             <div class="form-group">
-                                <table border="1">
+                                <table table-striped border="1" style="border-radius: 25px">
                                     <tr>
                                         <th><center>Karyawan</center></th>
                                         <th><center>Tanggal</center></th>
