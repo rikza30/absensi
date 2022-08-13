@@ -75,6 +75,13 @@ class PresensiController extends Controller
             'jamkerja' => date('H:i:s', strtotime($localtime) - strtotime($presensi->jammasuk))
         ];
 
+        if ($presensi->jamkeluar == ""){
+            $presensi->update($dt);
+            return redirect('/skeluar')->with('succes','Data Berhasil di Input');
+        }else{
+            return redirect('/skeluar')->with('succes','Data Berhasil di Input');
+        }
+
         return redirect('/skeluar');
     }
 
