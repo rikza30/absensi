@@ -24,6 +24,39 @@
             4px 4px 30px rgba(210, 25, 16, 0.4),
             4px 4px 40px rgba(210, 15, 06, 0.4);  
     }
+
+    .styled-table{
+      border-collapse: collapse;
+      margin: 25px 0;
+      font-size: 0.9em;
+      font-family: sans-serif;
+      min-width: 400px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+    }
+
+    .styled-table thead tr {
+      background-color: #3f6791;
+      color: #ffffff;
+      text-align: left;
+    }
+
+    .styled-table th,
+    .styled-table td {
+    padding: 12px 15px;
+    }
+
+    .styled-table tbody tr {
+      border-bottom: 1px solid #dddddd;
+    }
+
+    .styled-table tbody tr:nth-of-type(even) {
+      background-color: #f3f3f3;
+    }
+
+    .styled-table tbody tr:last-of-type{
+      border-bottom: 2px solid #3f6791;
+    }
+    
   </style>
 </head>
 <body class="hold-transition dark-mode sidebar-mini layout-fixed layout-navbar-fixed layout-footer-fixed" onload="realtimeClock()">
@@ -127,24 +160,33 @@
                                 </a>
                             </div>
                             <div class="form-group">
-                                <table table-striped border="1" style="border-radius: 25px">
-                                    <tr>
-                                        <th><center>Karyawan</center></th>
-                                        <th><center>Tanggal</center></th>
-                                        <th><center>Masuk</center></th>
-                                        <th><center>Keluar</center></th>
-                                        <th><center>Jumlah Jam Kerja</center></th>
-                                    </tr>
-                                    @foreach ($presensi as $pres)
-                                    <tr>
-                                        <td><center>{{ $pres->name }}</center></td>
-                                        <td><center>{{ $pres->tgl }}</center></td>
-                                        <td><center>{{ $pres->jammasuk }}</center></td>
-                                        <td><center>{{ $pres->jamkeluar }}</center></td>
-                                        <td><center>{{ $pres->jamkerja }}</center></td>
-                                    </tr>
-                                    @endforeach
-                                </table>
+                              <table class="styled-table">
+                                <thead>
+                                  <tr>
+                                      <th><center>Karyawan</center></th>
+                                      <th><center>Tanggal</center></th>
+                                      <th><center>Masuk</center></th>
+                                      <th><center>Keluar</center></th>
+                                      <th><center>Jumlah Jam Kerja</center></th>
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                  @forelse($presensi as $pres)
+                                  
+                                  <tr>
+                                      <td><center>{{ $pres->name }}</center></td>
+                                      <td><center>{{ $pres->tgl }}</center></td>
+                                      <td><center>{{ $pres->jammasuk }}</center></td>
+                                      <td><center>{{ $pres->jamkeluar }}</center></td>
+                                      <td><center>{{ $pres->jamkerja }}</center></td>
+                                  </tr>
+                                  @empty
+                                      <div class="alert alert-danger">
+                                        Belum Ada Data Absensi
+                                      </div>
+                                  @endforelse  
+                                </tbody>
+                              </table>
                             </div>
                         </div><!-- /.container-fluid -->
                     </div>
