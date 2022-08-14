@@ -36,7 +36,7 @@
 
     .styled-table thead tr {
       background-color: #3f6791;
-      color: #ffffff;
+      
       text-align: left;
     }
 
@@ -46,12 +46,9 @@
     }
 
     .styled-table tbody tr {
-      border-bottom: 1px solid #dddddd;
+      border-bottom: 1px solid #3f6791;
     }
 
-    .styled-table tbody tr:nth-of-type(even) {
-      background-color: #f3f3f3;
-    }
 
     .styled-table tbody tr:last-of-type{
       border-bottom: 2px solid #3f6791;
