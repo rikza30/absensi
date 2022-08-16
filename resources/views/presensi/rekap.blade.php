@@ -71,7 +71,7 @@
     <!-- Brand Logo -->
     <a href="index3.html" class="brand-link">
       <img src="{{asset('asset/dist/img/AdminLTELogo.png')}}" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
-      <span class="brand-text font-weight-light">AdminLTE 3</span>
+      <span class="brand-text font-weight-light">Griyasoft</span>
     </a>
 
     <!-- Sidebar -->
@@ -86,17 +86,7 @@
         </div>
       </div>
 
-      <!-- SidebarSearch Form -->
-      <div class="form-inline">
-        <div class="input-group" data-widget="sidebar-search">
-          <input class="form-control form-control-sidebar" type="search" placeholder="Search" aria-label="Search">
-          <div class="input-group-append">
-            <button class="btn btn-sidebar">
-              <i class="fas fa-search fa-fw"></i>
-            </button>
-          </div>
-        </div>
-      </div>
+      
 
       <!-- Sidebar Menu -->
       <nav class="mt-2">
@@ -128,10 +118,20 @@
     <div class="content-header">
       <div class="container-fluid">
         <div class="row mb-2">
+<<<<<<< HEAD
           <div class="col-sm-6">
             <h1 class="m-0">Laporan Presensi</h1>
           </div>
           
+=======
+          
+          <div class="col-sm-6 ">
+            <ol class="breadcrumb float-sm-left">
+              <li class="breadcrumb-item"><a href="/home">Home</a></li>
+              <li class="breadcrumb-item active">Laporan Presensi</li>
+            </ol>
+          </div>
+>>>>>>> 7acd5bc5a6effe2c4ddbb896530dcc0488b0b631
         </div>
       </div>
     </div>
