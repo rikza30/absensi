@@ -131,12 +131,7 @@
           <div class="col-sm-6">
             <h1 class="m-0">Laporan Presensi</h1>
           </div>
-          <div class="col-sm-6">
-            <ol class="breadcrumb float-sm-right">
-              <li class="breadcrumb-item"><a href="#">Home</a></li>
-              <li class="breadcrumb-item active">Laporan Presensi</li>
-            </ol>
-          </div>
+          
         </div>
       </div>
     </div>
@@ -152,8 +147,8 @@
                                 <input type="date" name="tglawal" id="tglawal" class="form-control" />
                             </div>
                             <div class="form-group">
-                                <a href="" onclick="this.href='/lihat-data/'+ document.getElementById('tglawal').value" class="btn btn-primary col-md-12">
-                                    Lihat <i class="fas fa-print"></i>
+                                <a href="" onclick="this.href='/lihat-data/'+ document.getElementById('tglawal').value" class="btn btn-primary col-md-12"><center>
+                                    Lihat <i class="fas fa-print"></center></i>
                                 </a>
                             </div>
                             <div class="form-group">
@@ -178,9 +173,9 @@
                                       <td><center>{{ $pres->jamkerja }}</center></td>
                                   </tr>
                                   @empty
-                                      <div class="alert alert-danger">
-                                        Belum Ada Data Absensi
-                                      </div>
+                                      <div class="alert alert-danger"><center>
+                                        Belum Ada Data Presensi
+                                      </center></div>
                                   @endforelse  
                                 </tbody>
                               </table>
