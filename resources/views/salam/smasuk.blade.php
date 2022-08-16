@@ -29,7 +29,7 @@
         <div class="alert alert-success" role="alert">
             <h4 class="alert-heading"><center>Terima Kasih!</h4>
             <p><center>Presensi Masuk Berhasil</p>
-          </div>
+        </div>
       </div>
     </div>
   <aside class="control-sidebar control-sidebar-dark">

@@ -24,6 +24,8 @@
             4px 4px 30px rgba(210, 25, 16, 0.4),
             4px 4px 40px rgba(210, 15, 06, 0.4);  
     }
+
+    
   </style>
 </head>
 <body class="hold-transition dark-mode sidebar-mini layout-fixed layout-navbar-fixed layout-footer-fixed" onload="realtimeClock()">

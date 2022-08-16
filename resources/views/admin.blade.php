@@ -3,8 +3,10 @@
 <head>
   <title>Dashboard</title>
   @include('template.head')
+  <link href="style.css" rel="stylesheet" type="text/css">
 </head>
 <body class="hold-transition dark-mode sidebar-mini layout-fixed layout-navbar-fixed layout-footer-fixed">
+
 <div class="wrapper">
 
   <!-- Preloader -->
@@ -21,11 +23,29 @@
     <!-- Content Header (Page header) -->
     <div class="content-header">
       <div class="container-fluid">
-        <div class="row mb-2">
-          <div class="col-sm-6">
-            <h1 class="m-0">Dashboard</h1>
+        <div class="card card-info card-outline">
+          <div class="card-header"><h1>Notifikasi</h1></div>
+          <div class="card-body">
+            <div class="col-sm-12">
+              <div class="alert fade alert-simple alert-success alert-dismissible text-left font__family-montserrat font__size-16 font__weight-light brk-library-rendered rendered show">
+                <i class="start-icon far fa-check-circle faa-tada animated"></i>
+                <strong class="font__weight-semibold">Rikza</strong> Telah Melakukan Presensi.
+              </div>
+            </div>
+            <div class="col-sm-12">
+              <div class="alert fade alert-simple alert-success alert-dismissible text-left font__family-montserrat font__size-16 font__weight-light brk-library-rendered rendered show">
+                <i class="start-icon far fa-check-circle faa-tada animated"></i>
+                <strong class="font__weight-semibold">Hafizh</strong> Telah Melakukan Presensi.
+              </div>
+            </div>
+            <div class="col-sm-12">
+              <div class="alert fade alert-simple alert-success alert-dismissible text-left font__family-montserrat font__size-16 font__weight-light brk-library-rendered rendered show">
+                <i class="start-icon far fa-check-circle faa-tada animated"></i>
+                <strong class="font__weight-semibold">Haris</strong> Telah Melakukan Presensi.
+              </div>
+            </div>
           </div>
-        </div>
+      </div>
       </div>
     </div>
   <aside class="control-sidebar control-sidebar-dark">
