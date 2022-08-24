@@ -69,7 +69,7 @@
   <!-- Main Sidebar Container -->
   <aside class="main-sidebar sidebar-dark-primary elevation-4">
     <!-- Brand Logo -->
-    <a href="index3.html" class="brand-link">
+    <a href="/home" class="brand-link">
       <img src="{{asset('asset/dist/img/AdminLTELogo.png')}}" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
       <span class="brand-text font-weight-light">Griyasoft</span>
     </a>
@@ -116,24 +116,8 @@
   <div class="content-wrapper">
     <!-- Content Header (Page header) -->
     <div class="content-header">
-      <div class="container-fluid">
-        <div class="row mb-2">
-<<<<<<< HEAD
-          <div class="col-sm-6">
-            <h1 class="m-0">Laporan Presensi</h1>
-          </div>
-          
-=======
-          
-          <div class="col-sm-6 ">
-            <ol class="breadcrumb float-sm-left">
-              <li class="breadcrumb-item"><a href="/home">Home</a></li>
-              <li class="breadcrumb-item active">Laporan Presensi</li>
-            </ol>
-          </div>
->>>>>>> 7acd5bc5a6effe2c4ddbb896530dcc0488b0b631
-        </div>
-      </div>
+      
+      
     </div>
     <div class="content">
         <div class="row justify-content-center">
@@ -164,7 +148,6 @@
                                 </thead>
                                 <tbody>
                                   @forelse($presensi as $pres)
-                                  
                                   <tr>
                                       <td><center>{{ $pres->name }}</center></td>
                                       <td><center>{{ $pres->tgl }}</center></td>

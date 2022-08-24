@@ -21,6 +21,7 @@
   <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">
     <!-- Content Header (Page header) -->
+    @if (auth()->user()->level == "admin")
     <div class="content-header">
       <div class="container-fluid">
         <div class="card card-info card-outline">
@@ -45,9 +46,49 @@
               </div>
             </div>
           </div>
-      </div>
+        </div>
       </div>
     </div>
+
+    <div class="content-header">
+      <div class="container-fluid">
+        <div class="card card-info card-outline">
+          <div class="card-header"><h1></h1></div>
+          <div class="card-body">
+            <form action="">
+              <div class="mb-3">
+                <label for="pesanadm" class="form-label">Kirim Pesan</label>
+                <input type="text" class="form-control" id="pesanadm" aria-describedby="emailHelp">
+              </div>
+              <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    {{-- @if (auth()->user()->level == "user") --}}
+
+    <div class="content-header">
+      <div class="container-fluid">
+        <div class="card card-info card-outline">
+          <div class="card-header"><h1>Notifikasi</h1></div>
+          <div class="card-body">
+            <div class="col-sm-12">
+              <div class="alert fade alert-simple alert-success alert-dismissible text-left font__family-montserrat font__size-16 font__weight-light brk-library-rendered rendered show">
+                <i class="start-icon far fa-check-circle faa-tada animated"></i>
+                {{-- @foreach ($collection as $item)
+                {{ $pres->pesanadm }}
+                @endforeach --}}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    @endif
+
   <aside class="control-sidebar control-sidebar-dark">
   </aside>
 
