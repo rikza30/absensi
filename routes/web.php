@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\PresensiController;
+use App\Http\Controllers\PesanController;
 
 /*
 |--------------------------------------------------------------------------
@@ -46,6 +47,10 @@ Route::post('/ubahpresensi',[PresensiController::class,'presensipulang'])->name(
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'home'])->name('home');
 
 Route::resource('presensi', PresensiController::class);
+Route::resource('pesan', PesanController::class);
+
+Route::post('/simpanpesan', [PesanController::class, 'store'])->name('simpanpesan');
+
 
 Auth::routes();
 
