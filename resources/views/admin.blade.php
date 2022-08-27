@@ -56,7 +56,7 @@
           <div class="card-header"><h1></h1></div>
           <div class="card-body">
             <form action="{{route('simpanpesan')}}" method="POST">
-            {{csrf_field()}}
+            @csrf
               <div class="mb-3">
                 <label for="pesanadm" class="form-label">Kirim Pesan</label>
                 <input type="text" class="form-control" name="pesan" aria-describedby="emailHelp">
@@ -78,6 +78,9 @@
             <div class="col-sm-12">
               <div class="alert fade alert-simple alert-success alert-dismissible text-left font__family-montserrat font__size-16 font__weight-light brk-library-rendered rendered show">
                 <i class="start-icon far fa-check-circle faa-tada animated"></i>
+                @foreach ($pesan as $item)
+                {{ $pesan->pesan }}
+                @endforeach
               </div>
             </div>
           </div>

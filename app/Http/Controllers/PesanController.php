@@ -49,7 +49,8 @@ class PesanController extends Controller
      */
     public function show($id)
     {
-        //
+        $pesan = Pesan::latest()->paginate(5);
+        return view('simpanpesan', compact('pesan'));
     }
 
     /**
