@@ -3,6 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Http\Controllers\PesanController;
+use App\Models\Pesan;
+
 
 class HomeController extends Controller
 {
@@ -23,6 +26,7 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('admin');
+        $pesan = Pesan::latest()->paginate(5);
+        return view('admin', compact('pesan'));
     }
 }

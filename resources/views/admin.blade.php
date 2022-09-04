@@ -50,6 +50,8 @@
       </div>
     </div>
 
+   
+
     <div class="content-header">
       <div class="container-fluid">
         <div class="card card-info card-outline">
@@ -68,7 +70,9 @@
       </div>
     </div>
 
-    {{-- @if (auth()->user()->level == "user") --}}
+  
+
+    @elseif (auth()->user()->level == "user")
 
     <div class="content-header">
       <div class="container-fluid">
@@ -79,7 +83,7 @@
               <div class="alert fade alert-simple alert-success alert-dismissible text-left font__family-montserrat font__size-16 font__weight-light brk-library-rendered rendered show">
                 <i class="start-icon far fa-check-circle faa-tada animated"></i>
                 @foreach ($pesan as $item)
-                {{ $pesan->pesan }}
+                {{ $item->pesan }}
                 @endforeach
               </div>
             </div>

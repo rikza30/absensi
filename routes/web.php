@@ -41,6 +41,8 @@ Route::get('/smasuk', function () {
     return view('salam.smasuk');
 });
 
+return view ('simpannotif', ['pesan' => $pesan]);
+
 Route::post('/simpanmasuk', [PresensiController::class, 'store'])->name('simpanmasuk');
 Route::post('/ubahpresensi',[PresensiController::class,'presensipulang'])->name('ubahpresensi');
 
@@ -48,9 +50,9 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'home'])->name(
 
 Route::resource('presensi', PresensiController::class);
 Route::resource('pesan', PesanController::class);
+Route::resource('pesan', HomeController::class);
 
-Route::post('/simpanpesan', [PesanController::class, 'store'])->name('simpanpesan');
-
+Route::post('/simpannotif', [PesanController::class, 'store'])->name('simpannotif');
 
 Auth::routes();
 
