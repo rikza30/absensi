@@ -38,7 +38,7 @@ class PesanController extends Controller
         $pesan = Pesan::create($request->all());
         $pesan->save();
 
-        return redirect('simpanpesan');
+        return redirect('simpannotif');
     }
 
     /**

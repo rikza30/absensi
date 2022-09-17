@@ -57,8 +57,9 @@
         <div class="card card-info card-outline">
           <div class="card-header"><h1></h1></div>
           <div class="card-body">
-            <form action="{{route('simpanpesan')}}" method="POST">
-            @csrf
+            <form action="{{route('simpannotif')}}" method="PUT">
+              @csrf  
+              @method('PUT')
               <div class="mb-3">
                 <label for="pesanadm" class="form-label">Kirim Pesan</label>
                 <input type="text" class="form-control" name="pesan" aria-describedby="emailHelp">
