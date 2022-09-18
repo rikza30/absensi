@@ -33,7 +33,7 @@
     }
     
   </style>
-  <link href="style.css" rel="stylesheet" type="text/css">
+  
 </head>
 <body class="hold-transition dark-mode sidebar-mini layout-fixed layout-navbar-fixed layout-footer-fixed">
 
@@ -52,6 +52,7 @@
   <div class="content-wrapper">
     <!-- Content Header (Page header) -->
     @if (auth()->user()->level == "admin")
+    <!--
     <div class="content-header">
       <div class="container-fluid">
         <div class="card card-info card-outline">
@@ -78,20 +79,20 @@
           </div>
         </div>
       </div>
-    </div>
+    </div> -->
 
    
 
     <div class="content-header">
       <div class="container-fluid">
         <div class="card card-info card-outline">
-          <div class="card-header"><h1></h1></div>
+          <div class="card-header"><h1>Kirim Pesan</h1></div>
           <div class="card-body">
             <form action="{{route('simpannotif')}}" method="PUT">
               @csrf  
               @method('PUT')
               <div class="mb-3">
-                <label for="pesanadm" class="form-label">Kirim Pesan</label>
+                <!-- <label for="pesanadm" class="form-label">Kirim Pesan</label> -->
                 <input type="text" class="form-control" name="pesan" aria-describedby="emailHelp">
               </div>
               <button type="submit" class="btn btn-primary">Submit</button>
@@ -115,9 +116,7 @@
       <div class="row justify-content-center">
         <div class="content">
           <div class="row justify-content-center">
-            <div class="container-fluid">
               <div class="card card-info card-outline">
-              <div class="card-header">Lihat Data</div>
               <div class="card-body">
                 <div class="form-group">
                   <table class="styled-table">
@@ -129,15 +128,14 @@
                     <tbody>
                       @foreach($pesan as $item)
                       <tr>
-                          <td>{{$item->pesan}}</td>
+                          <td><center>{{$item->pesan}}</center></td>
                       </tr>
                       @endforeach  
                     </tbody>
                   </table>
+                </div>
               </div>
-            </div>
-            </div>
-        </div>
+              </div>
           </div>
         </div>
       </div>

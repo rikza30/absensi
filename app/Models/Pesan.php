@@ -8,7 +8,7 @@ use App\Http\Controllers\PesanController;
 
 class Pesan extends Model
 {
-    protected $table = 'pesan';
+    protected $table = 'pesans';
     protected $primaryKey = 'id';
     protected $fillable = ['id', 'pesan'];
 }
